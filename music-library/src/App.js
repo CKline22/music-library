@@ -28,20 +28,19 @@ function App () {
   }
   
   return (
-      <div className='App'>
+      <div>
         <SearchContext.Provider value={{
           term: searchInput,
           handleSearch: handleSearch
         }}>
           <SearchBar />
         </SearchContext.Provider>
-          <SearchBar handleSearch = {handleSearch} />
           {message}
           <DataContext.Provider value={data}>
             <Gallery/>
           </DataContext.Provider>
       </div>
-  )
+  );
   }  
 
 
